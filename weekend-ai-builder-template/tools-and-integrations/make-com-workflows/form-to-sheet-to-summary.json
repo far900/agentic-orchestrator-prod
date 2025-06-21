@@ -1,0 +1,4 @@
+{
+  "workflow": "Form ➝ Google Sheet ➝ GPT Summary",
+  "description": "Auto-log form responses and summarize them using a prompt"
+}
