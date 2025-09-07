@@ -1,0 +1,8 @@
+def compute_grounding_accuracy(agent_output, gold_standard):
+    """
+    Compares agent output to gold standard and returns grounding accuracy as a float.
+    """
+    if not agent_output or not gold_standard:
+        return 0.0
+    matches = sum(1 for a, g in zip(agent_output, gold_standard) if a.strip().lower() == g.strip().lower())
+    return round(matches / len(gold_standard), 3)
