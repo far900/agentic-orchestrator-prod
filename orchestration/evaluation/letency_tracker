@@ -1,0 +1,11 @@
+import time
+
+def track_latency(agent_output):
+    """
+    Simulates latency tracking. Replace with actual timestamps in production.
+    """
+    start_time = time.time()
+    # Simulate processing
+    time.sleep(0.05)
+    end_time = time.time()
+    return int((end_time - start_time) * 1000)  # latency in ms
