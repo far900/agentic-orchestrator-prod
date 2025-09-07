@@ -1,0 +1,15 @@
+def executor_agent(state):
+    """
+    Executes the selected tool and returns the result.
+    """
+    tool_name = state.get("tool")
+    query = state.get("query")
+
+    if tool_name == "Search":
+        from tools.search_tool import search_tool
+        return {"result": search_tool(query)}
+    elif tool_name == "Summarizer":
+        from tools.summarizer_tool import summarizer_tool
+        return {"result": summarizer_tool(query)}
+    else:
+        return {"result": "No valid tool selected."}
