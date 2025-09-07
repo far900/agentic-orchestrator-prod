@@ -1,0 +1,12 @@
+def planner_agent(state):
+    """
+    Determines the next action based on user intent and context.
+    """
+    query = state.get("query", "").lower()
+    
+    if "summarize" in query:
+        return {"action": "summarize", "tool": "Summarizer"}
+    elif "search" in query:
+        return {"action": "search", "tool": "Search"}
+    else:
+        return {"action": "default", "tool": "Search"}
