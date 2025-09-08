@@ -1,6 +1,0 @@
-def search_tool(query):
-    """
-    Simulates a search tool that returns mock results.
-    Replace with real API or vector DB lookup in production.
-    """
-    return f"Search results for: '{query}'"
